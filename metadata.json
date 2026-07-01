@@ -1,0 +1,8 @@
+{
+  "name": "Morgan Shop",
+  "description": "An elegant, premium clothing store featuring seasonal collections, interactive sizes, customer reviews, shopping cart discount coupons, and a seamless checkout experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
