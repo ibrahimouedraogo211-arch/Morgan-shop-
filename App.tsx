@@ -234,7 +234,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F8F4] text-stone-800 selection:bg-stone-900 selection:text-white flex flex-col justify-between">
+    <div className="min-h-screen w-full bg-[#F9F8F4] text-stone-800 selection:bg-stone-900 selection:text-white flex flex-col justify-between overflow-x-hidden">
       {/* Luxurious Navigation Header */}
       <Header
         cart={cart}
@@ -477,7 +477,7 @@ const App: React.FC = () => {
       </AnimatePresence>
 
       {/* Modern footer */}
-      <footer className="bg-stone-950 text-stone-400 py-12 border-t border-stone-850 mt-16 print:hidden font-sans">
+      <footer className="w-full bg-stone-950 text-stone-400 py-12 border-t border-stone-850 mt-16 print:hidden font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <span className="font-serif font-bold text-xl tracking-[0.2em] text-white">MORGAN</span>
@@ -521,7 +521,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-stone-900/80 flex flex-col sm:flex-row items-center justify-between text-[10px] text-stone-600">
           <div className="text-center sm:text-left">
             <p>© 2026 Morgan Shop. All rights reserved. Registered under UK Business Code.</p>
-            <p className="mt-1 text-[11px] text-stone-500 font-medium italic">Build with love by Anthonius Croese</p>
+            <p className="mt-1 text-[11px] text-stone-500 font-medium italic">Designed with love by Anthonius Croese</p>
           </div>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <a href="#" className="hover:text-stone-400 transition-colors">Privacy Terms</a>

@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center bg-[#F4F3EE] overflow-hidden">
+    <section className="relative h-screen w-full flex items-center justify-center bg-[#F4F3EE] overflow-hidden">
       {/* Editorial Split Grid */}
       <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 h-full w-full">
         {/* Left Side Content Placement (Spacer for layout overlay) */}
