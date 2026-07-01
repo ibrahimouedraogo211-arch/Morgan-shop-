@@ -265,7 +265,7 @@ const App: React.FC = () => {
             <Hero />
 
             {/* Boutique Catalog Segment */}
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-1 space-y-10" id="boutique-grid">
+            <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-1 space-y-10 box-border" id="boutique-grid">
             {/* Filter and Sorting Header Panel */}
             <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-stone-200 pb-6 gap-6">
               <div className="space-y-1">
@@ -323,7 +323,7 @@ const App: React.FC = () => {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-full box-border">
                 {processedProducts.map((prod) => (
                   <ProductCard
                     key={prod.id}
@@ -402,18 +402,18 @@ const App: React.FC = () => {
                     </p>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleNewsletterSubmit} className="flex gap-2 w-full">
+                  <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3 w-full">
                     <input
                       type="email"
                       required
                       placeholder="Enter your email address..."
                       value={newsletterEmail}
                       onChange={(e) => setNewsletterEmail(e.target.value)}
-                      className="flex-1 px-4 py-3 bg-white/5 border border-white/10 text-white rounded text-xs outline-none focus:border-white placeholder-stone-500 font-sans"
+                      className="w-full sm:flex-1 px-4 py-3 bg-white/5 border border-white/10 text-white rounded text-xs outline-none focus:border-white placeholder-stone-500 font-sans"
                     />
                     <button
                       type="submit"
-                      className="px-6 py-3 bg-white hover:bg-stone-200 text-stone-900 rounded text-xs font-semibold uppercase tracking-wider transition-colors"
+                      className="w-full sm:w-auto px-6 py-3 bg-white hover:bg-stone-200 text-stone-900 rounded text-xs font-semibold uppercase tracking-wider transition-colors"
                     >
                       Subscribe
                     </button>
