@@ -128,7 +128,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               </h2>
 
               <p className="text-xl font-semibold text-stone-900 font-sans">
-                ${product.price.toFixed(2)}
+                £{product.price.toFixed(2)}
               </p>
 
               <div className="h-px bg-stone-200" />
@@ -294,7 +294,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 ) : (
                   <>
                     <ShoppingBag size={15} />
-                    Add to Bag — ${(product.price * quantity).toFixed(2)}
+                    Add to Bag — £{(product.price * quantity).toFixed(2)}
                   </>
                 )}
               </button>
@@ -349,7 +349,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               )}
               {activeTab === 'shipping' && (
                 <div className="space-y-2">
-                  <p><strong>Standard Shipping:</strong> Complimentary standard delivery on orders above $150. Dispatched within 24-48 business hours.</p>
+                  <p><strong>Standard Shipping:</strong> Complimentary standard delivery on orders above £150. Dispatched within 24-48 business hours.</p>
                   <p><strong>Returns:</strong> We offer smooth, hassle-free returns on all unworn items returned within 30 days of shipment receipt, accompanied by original tags and packaging.</p>
                 </div>
               )}

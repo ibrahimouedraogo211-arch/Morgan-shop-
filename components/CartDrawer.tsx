@@ -162,9 +162,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
                     {/* Single vs Total price */}
                     <div className="text-right">
-                      <span className="text-xs text-stone-400 block">${item.product.price.toFixed(2)} ea</span>
+                      <span className="text-xs text-stone-400 block">£{item.product.price.toFixed(2)} ea</span>
                       <span className="text-sm font-semibold text-stone-950">
-                        ${(item.product.price * item.quantity).toFixed(2)}
+                        £{(item.product.price * item.quantity).toFixed(2)}
                       </span>
                     </div>
                   </div>
@@ -214,13 +214,13 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
             <div className="space-y-2 text-xs font-sans text-stone-600">
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span className="font-semibold text-stone-900">${subtotal.toFixed(2)}</span>
+                <span className="font-semibold text-stone-900">£{subtotal.toFixed(2)}</span>
               </div>
 
               {activeDiscount && (
                 <div className="flex justify-between text-emerald-600 font-medium">
                   <span>Discount ({activeDiscount.code})</span>
-                  <span>-${discountAmount.toFixed(2)}</span>
+                  <span>-£{discountAmount.toFixed(2)}</span>
                 </div>
               )}
 
@@ -230,19 +230,19 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   {shippingCost === 0 ? (
                     <span className="text-emerald-600 font-semibold uppercase text-[10px]">Free Standard</span>
                   ) : (
-                    `$${shippingCost.toFixed(2)}`
+                    `£${shippingCost.toFixed(2)}`
                   )}
                 </span>
               </div>
 
               <div className="flex justify-between">
                 <span>Estimated Local Tax (8%)</span>
-                <span>${taxAmount.toFixed(2)}</span>
+                <span>£{taxAmount.toFixed(2)}</span>
               </div>
 
               {shippingCost > 0 && (
                 <p className="text-[9px] text-stone-400 leading-none">
-                  Add <strong className="text-stone-600 font-bold">${(shippingThreshold - subtotal).toFixed(2)}</strong> more for free premium standard delivery.
+                  Add <strong className="text-stone-600 font-bold">£{(shippingThreshold - subtotal).toFixed(2)}</strong> more for free premium standard delivery.
                 </p>
               )}
 
@@ -250,7 +250,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
               <div className="flex justify-between text-base font-semibold text-stone-950 pt-1">
                 <span className="font-serif">Total Estimate</span>
-                <span className="font-sans font-bold">${total.toFixed(2)}</span>
+                <span className="font-sans font-bold">£{total.toFixed(2)}</span>
               </div>
             </div>
 

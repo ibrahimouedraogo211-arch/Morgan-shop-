@@ -116,7 +116,7 @@ export const Confirmation: React.FC<ConfirmationProps> = ({
                       <p className="text-[10px] text-stone-500 mt-0.5">Color: {item.selectedColor.name}</p>
                     </div>
                   </div>
-                  <p className="font-semibold text-stone-900">${(item.product.price * item.quantity).toFixed(2)}</p>
+                  <p className="font-semibold text-stone-900">£{(item.product.price * item.quantity).toFixed(2)}</p>
                 </div>
               ))}
             </div>
@@ -126,31 +126,31 @@ export const Confirmation: React.FC<ConfirmationProps> = ({
           <div className="pt-4 border-t border-stone-200 text-xs text-stone-600 font-sans space-y-2 max-w-xs ml-auto">
             <div className="flex justify-between">
               <span>Subtotal</span>
-              <span className="font-semibold text-stone-900">${subtotal.toFixed(2)}</span>
+              <span className="font-semibold text-stone-900">£{subtotal.toFixed(2)}</span>
             </div>
 
             {discountAmount > 0 && (
               <div className="flex justify-between text-emerald-600 font-semibold">
                 <span>Discount ({discountCode})</span>
-                <span>-${discountAmount.toFixed(2)}</span>
+                <span>-£{discountAmount.toFixed(2)}</span>
               </div>
             )}
 
             <div className="flex justify-between">
               <span>Standard Shipping</span>
-              <span>{shippingCost === 0 ? 'Complimentary' : `$${shippingCost.toFixed(2)}`}</span>
+              <span>{shippingCost === 0 ? 'Complimentary' : `£${shippingCost.toFixed(2)}`}</span>
             </div>
 
             <div className="flex justify-between">
               <span>Estimated Tax (8%)</span>
-              <span>${taxAmount.toFixed(2)}</span>
+              <span>£{taxAmount.toFixed(2)}</span>
             </div>
 
             <div className="h-px bg-stone-150 pt-1" />
 
             <div className="flex justify-between text-base font-semibold text-stone-950 pt-1 font-serif">
               <span>Total Paid</span>
-              <span className="font-sans font-bold">${total.toFixed(2)}</span>
+              <span className="font-sans font-bold">£{total.toFixed(2)}</span>
             </div>
           </div>
 

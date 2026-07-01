@@ -519,7 +519,10 @@ const App: React.FC = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-stone-900/80 flex flex-col sm:flex-row items-center justify-between text-[10px] text-stone-600">
-          <p>© 2026 Morgan Shop. All rights reserved. Registered under UK Business Code.</p>
+          <div className="text-center sm:text-left">
+            <p>© 2026 Morgan Shop. All rights reserved. Registered under UK Business Code.</p>
+            <p className="mt-1 text-[11px] text-stone-500 font-medium italic">Build with love by Anthonius Croese</p>
+          </div>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <a href="#" className="hover:text-stone-400 transition-colors">Privacy Terms</a>
             <span>•</span>

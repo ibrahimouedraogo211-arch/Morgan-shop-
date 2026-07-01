@@ -87,7 +87,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenDetails
         {/* Price & Size Previews */}
         <div className="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between">
           <span className="text-sm font-semibold text-stone-900 font-sans">
-            ${product.price.toFixed(2)}
+            £{product.price.toFixed(2)}
           </span>
           <div className="flex gap-1">
             {product.sizes.slice(0, 3).map((sz) => (

@@ -476,7 +476,7 @@ export const Checkout: React.FC<CheckoutProps> = ({
                     type="submit"
                     className="w-full h-12 bg-stone-950 hover:bg-stone-850 text-white rounded-md font-semibold text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-md flex items-center justify-center gap-2 mt-4"
                   >
-                    Confirm Purchase — ${total.toFixed(2)}
+                    Confirm Purchase — £{total.toFixed(2)}
                   </button>
                 </form>
               )}
@@ -496,9 +496,9 @@ export const Checkout: React.FC<CheckoutProps> = ({
                     <div className="flex-1 min-w-0">
                       <p className="font-serif font-bold text-stone-900 truncate">{item.product.name}</p>
                       <p className="text-[10px] text-stone-400 mt-0.5">Size: {item.selectedSize} | Qty: {item.quantity}</p>
-                      <p className="text-[10px] font-semibold text-stone-600 mt-1">${item.product.price.toFixed(2)} ea</p>
+                      <p className="text-[10px] font-semibold text-stone-600 mt-1">£{item.product.price.toFixed(2)} ea</p>
                     </div>
-                    <p className="font-semibold text-stone-950 text-right">${(item.product.price * item.quantity).toFixed(2)}</p>
+                    <p className="font-semibold text-stone-950 text-right">£{(item.product.price * item.quantity).toFixed(2)}</p>
                   </div>
                 ))}
               </div>
@@ -507,13 +507,13 @@ export const Checkout: React.FC<CheckoutProps> = ({
               <div className="pt-4 border-t border-stone-100 space-y-2.5 text-xs text-stone-600 font-sans">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span className="font-semibold text-stone-900">${subtotal.toFixed(2)}</span>
+                  <span className="font-semibold text-stone-900">£{subtotal.toFixed(2)}</span>
                 </div>
 
                 {discountAmount > 0 && (
                   <div className="flex justify-between text-emerald-600 font-medium">
                     <span>Discount ({discountCode})</span>
-                    <span>-${discountAmount.toFixed(2)}</span>
+                    <span>-£{discountAmount.toFixed(2)}</span>
                   </div>
                 )}
 
@@ -523,21 +523,21 @@ export const Checkout: React.FC<CheckoutProps> = ({
                     {shippingCost === 0 ? (
                       <span className="text-emerald-600 font-semibold uppercase text-[10px]">Free Premium Delivery</span>
                     ) : (
-                      `$${shippingCost.toFixed(2)}`
+                      `£${shippingCost.toFixed(2)}`
                     )}
                   </span>
                 </div>
 
                 <div className="flex justify-between">
                   <span>Estimated Tax (8%)</span>
-                  <span>${taxAmount.toFixed(2)}</span>
+                  <span>£{taxAmount.toFixed(2)}</span>
                 </div>
 
                 <div className="h-px bg-stone-150 pt-1" />
 
                 <div className="flex justify-between text-base font-semibold text-stone-950 pt-1 font-serif">
                   <span>Total Amount</span>
-                  <span className="font-sans font-bold">${total.toFixed(2)}</span>
+                  <span className="font-sans font-bold">£{total.toFixed(2)}</span>
                 </div>
               </div>
 
